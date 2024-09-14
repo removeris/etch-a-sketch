@@ -23,9 +23,19 @@ function changeCellColor() {
 
     gridCells.forEach((gridCell) => {
         gridCell.addEventListener("mouseenter", () => {
-            gridCell.classList.add("hover");
+            gridCell.style.backgroundColor = randomizeColor();
         })
     })
+}
+
+function randomizeColor(){
+    const red = Math.random() * 255;
+    const green = Math.random() * 255;
+    const blue = Math.random() * 255;
+
+    const color = `rgb(${red},${green},${blue})`;
+
+    return color;
 }
 
 function createNewGrid() {
