@@ -26,7 +26,7 @@ function changeCellColor() {
         gridCell.addEventListener("mouseenter", () => {
             if(gridCell.style.backgroundColor == "white"){
                 gridCell.style.backgroundColor = randomizeColor();
-                gridCell.style.opacity = 0.5;
+                gridCell.style.opacity = 0.1;
             }
             else if(gridCell.style.opacity < 1){
                 const currentOpacity = Number(gridCell.style.opacity);
