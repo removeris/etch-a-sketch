@@ -1,7 +1,7 @@
 function createGrid(gridSize){
     const container = document.querySelector("#container");
 
-    let gridCellSize = Math.floor(container.offsetHeight / gridSize) - 2;
+    let gridCellSize = Math.round(container.offsetHeight / gridSize);
 
     console.log(gridCellSize);
 
@@ -31,7 +31,7 @@ function changeCellColor() {
             else if(gridCell.style.opacity < 1){
                 const currentOpacity = Number(gridCell.style.opacity);
                 gridCell.style.opacity = currentOpacity + 0.1;
-                console.log(gridCell.style.opacity);
+                return;
             }
   
         })

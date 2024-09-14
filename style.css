@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #container {
     width: 960px;
     height: 960px;
@@ -5,14 +9,29 @@
     margin-right: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-items: stretch;
+    align-content: space-evenly;
 }
 
 .grid-cell {
+    flex-grow: 0;
     border: 1px solid black;
-    align-self: center;
 }
 
 .hover {
     background-color: grey;
+}
+
+#button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+button {
+    font-size: 50px;
+    text-align: center;
+    padding: 25px 50px;
+    border: 3px solid black;
+    border-radius: 15px;
 }
